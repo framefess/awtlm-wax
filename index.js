@@ -53,5 +53,5 @@ client.on("message", msg => {
 })
 
 keepalive()
-client.login("ODQyMjI4ODQ1ODkyOTkzMDQ1.YJyQvA.lj5ndVBbY0AIYrR2HFCKsirkZ7U")
+client.login(process.env.TOKEN)
 
