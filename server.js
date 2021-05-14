@@ -7,7 +7,7 @@ server.all("/",(req,res) =>{
 })
 
 function keepalive() {
-  server.listen(3000,()=>{
+  server.listen(process.env.PORT || 5000,()=>{
     console.log("server is ready");
     })
 }
