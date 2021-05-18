@@ -26,7 +26,7 @@ gettlmwax = async () => {
   var dateTime = date + ' ' + time;
   // console.log(dateTime);
 
-  client.channels.cache.get(channelid).send(dateTime+' >>> 1 TLM = ' + tlmtowax + ' WAX ||| 1 WAX = ' + waxtotlm + ' TLM')
+  client.channels.cache.get(channelid).send(dateTime + ' >>> 1 TLM = ' + tlmtowax + ' WAX ||| 1 WAX = ' + waxtotlm + ' TLM')
 };
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`)
@@ -49,6 +49,13 @@ client.on("message", msg => {
   if (msg.content === "ping") {
     msg.reply("pong")
   }
+  if (msg.content === "clear") {
+    msg.channel.messages.forEach((mg) => {
+      mg.delete();
+      i++
+    })
+  }
+  let i = 0;
 
 })
 
