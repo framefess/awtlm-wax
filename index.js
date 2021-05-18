@@ -49,13 +49,13 @@ client.on("message", msg => {
   if (msg.content === "ping") {
     msg.reply("pong")
   }
-  let i = 0;
-  if (msg.content === "clear") {
-    msg.channel.messages.forEach((mg) => {
-      mg.delete();
-      i++
-    })
-  }
+  // let i = 0;
+  // if (msg.content === "clear") {
+  //   msg.channel.messages.forEach((mg) => {
+  //     mg.delete();
+  //     i++
+  //   })
+  // }
 })
 
 keepalive()
